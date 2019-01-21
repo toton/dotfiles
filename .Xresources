@@ -1,0 +1,39 @@
+! reload with xrdb ~/.Xresources
+
+xterm*faceName: Monospace:size=11:antialias=false
+xterm*saveLines: 8192
+XTerm*reverseVideo: on
+
+! set if there are problems with color display
+xterm*termName: xterm-256color
+
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+XTerm*fullscreen: never
+XTerm.omitTranslation: fullscreen
+xterm*borderWidth: 0
+
+! We have selection and middle click for copy and paste from PRIMARY;
+! the following enables copy and paste shortcuts for CLIPBOARD
+XTerm*vt100.translations: #override \
+        Ctrl Shift <KeyPress> C:  copy-selection(CLIPBOARD,CUT_BUFFER0) \n\
+        Ctrl Shift <KeyPress> V:  insert-selection(CLIPBOARD,CUT_BUFFER0)
+
+
+!
+!        Shift <KeyPress> Up:      scroll-back(1, line) \n\
+!        Shift <KeyPress> Down:    scroll-forw(1, line) \n\
+!
+
+! see https://github.com/AladW/arch-i3/blob/master/.Xresources#L17
+
+! xterm*scrollTtyOutput: false ?????
+! Fix scroll in "alterate screens" (less, man, etc.)
+XTerm*alternateScroll: true
+
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+XTerm*color1: rgb:ff/6f/60
+XTerm*color4: rgb:60/6f/ff
+
+Xft*antialias: false
