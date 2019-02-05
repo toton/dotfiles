@@ -7,6 +7,8 @@ set guioptions=Pce
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 "match Error /\%121v.\+/
 set autoindent
+set nocindent
+filetype plugin indent off
 set list listchars=tab:→\ ,trail:·
 set undofile
 set autowriteall
