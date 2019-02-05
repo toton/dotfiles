@@ -23,6 +23,7 @@ set wildmode=longest,list,full
 :nnoremap <leader>h :bufdo %s/<C-R><C-W>//gec<Left><Left><Left><Left>
 :nnoremap <leader>w :wa<CR>
 :nnoremap <leader>m :make<CR>:cn<CR><CR>
+:nnoremap <leader>b :b<Space>
 
 colorscheme industry
 "colorscheme default
