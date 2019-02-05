@@ -13,6 +13,9 @@ set list listchars=tab:→\ ,trail:·
 set undofile
 set autowriteall
 
+set autoread
+autocmd FocusGained * :checktime
+
 "set wildmode=longest:full,full
 set wildmode=longest,list,full
 
