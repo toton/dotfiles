@@ -25,6 +25,8 @@ set wildmode=longest,list,full
 :nnoremap <leader>m :make<CR>:cn<CR><CR>
 :nnoremap <leader>b :b<Space>
 
+set termguicolors
+
 colorscheme industry
 "colorscheme default
 "highlight Visual cterm=reverse ctermbg=NONE
