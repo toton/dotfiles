@@ -36,3 +36,15 @@ set termguicolors
 colorscheme industry
 "colorscheme default
 "highlight Visual cterm=reverse ctermbg=NONE
+
+"colorscheme shine
+"hi Normal     guifg=#000000 guibg=#ffffff
+"
+"hi Comment      guifg=#6060c0 guibg=#ffffff gui=NONE
+"hi Constant     guifg=#009800 guibg=#ffffff
+"hi Number       guifg=#809800 guibg=#ffffff gui=NONE
+"hi Special      guifg=#00a000 guibg=#e0e0e0
+"hi Identifier   guifg=#008080 guibg=#ffffff
+"hi LineNr       guifg=#808060 guibg=#ffffff gui=italic
+"hi CursorLineNr guifg=#906060 guibg=#ffffff gui=bold
+"hi Statement    guifg=#000000               gui=bold
