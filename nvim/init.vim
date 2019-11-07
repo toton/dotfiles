@@ -25,6 +25,12 @@ set wildmode=longest,list,full
 :nnoremap <leader>m :make<CR>:cn<CR><CR>
 :nnoremap <leader>b :b<Space>
 
+"How to make Esc travel safely across all the msys2/bash/mosh/tmux layers:
+"First, to map CapsLock->F1 on the Windows side: c:\Programs\uncap.exe" 0x14:0x70
+"Then let vim consume it this way:
+map <F1> <Esc>
+imap <F1> <Esc>
+
 set termguicolors
 
 colorscheme industry
