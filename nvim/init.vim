@@ -16,6 +16,8 @@ set autowriteall
 set autoread
 autocmd FocusGained * :checktime
 
+set clipboard+=unnamedplus
+
 "set wildmode=longest:full,full
 set wildmode=longest,list,full
 
