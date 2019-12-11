@@ -32,6 +32,7 @@ set wildmode=longest,list,full
 "Then let vim consume it this way:
 map <F1> <Esc>
 imap <F1> <Esc>
+cmap <F1> <Esc>
 
 set termguicolors
 
