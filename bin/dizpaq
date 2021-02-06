@@ -1,0 +1,2 @@
+tar -cf $1.tar $1
+time zpaq -m5 add $1.tar.zpaq $1.tar

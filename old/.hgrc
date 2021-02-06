@@ -1,0 +1,13 @@
+#[ui]
+#username =
+
+[extensions]
+color =
+pager =
+rebase =
+
+[pager]
+pager = LESS='FRX' less
+
+#[http_proxy]
+#host = http://[host]:[port]/

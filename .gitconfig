@@ -24,4 +24,4 @@
 #        proxy = https://[host]:[port]
 
 [include]
-	path = ~/.local.gitconfig
+	path = ~/.config/git/.gitconfig.local
