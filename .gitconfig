@@ -2,6 +2,8 @@
         date = iso
 [push]
         default = simple
+[pull]
+        ff = only
 [core]
         quotepath = false
 #        excludesfile = ~/.gitignore
