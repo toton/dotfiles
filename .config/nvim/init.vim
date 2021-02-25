@@ -41,6 +41,10 @@ cmap <S-F1> <Esc>
 set termguicolors
 
 colorscheme industry
+
+"hi Search guibg=#9f8300
+hi Search guibg=peru
+
 "colorscheme default
 "highlight Visual cterm=reverse ctermbg=NONE
 
