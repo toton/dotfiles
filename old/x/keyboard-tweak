@@ -1,0 +1,12 @@
+DISPLAY=:0 xset r rate 100 100
+DISPLAY=:0 setxkbmap -option "caps:escape"
+# setxkbmap -option "capslock:hyper"  # not working for some unknown reason
+
+# For some extremely stubborn keyboards: 
+# while true; do xset r rate 100 100; sleep 10; done
+
+# Old pieces:
+# cat - >>~/.xinitrc
+# test -f ~/.Xkeymap && xkbcomp ~/.Xkeymap $DISPLAY
+# xkbcomp $DISPLAY ~/.Xkeymap
+

@@ -1,0 +1,13 @@
+
+defaults.pcm.!card "2"; # The override operation mode is necessary here, because of
+defaults.ctl.!card "2"; # different value types.
+
+pcm.!default {
+    type hw
+    card 2
+}
+
+ctl.!default {
+    type hw           
+    card 2
+}

@@ -1,0 +1,83 @@
+527a528,561
+>     type "mod4_FOUR_LEVEL_ALPHABETIC" {
+>         modifiers= Shift+Lock+LevelThree+Mod4;
+>         map[Shift]= Level2;
+>         map[Lock]= Level2;
+>         map[LevelThree]= Level3;
+>         map[Shift+LevelThree]= Level4;
+>         map[Lock+LevelThree]= Level4;
+>         map[Shift+Lock+LevelThree]= Level3;
+>         map[Mod4] = Level5;
+>         map[Shift+Mod4] = Level5;
+>         level_name[Level1]= "Base";
+>         level_name[Level2]= "Shift";
+>         level_name[Level3]= "Alt Base";
+>         level_name[Level4]= "Shift Alt";
+>         level_name[Level5]= "Mod4 Shift Alt";
+>     };
+>     type "mod4_FOUR_LEVEL_SEMIALPHABETIC" {
+>         modifiers= Shift+Lock+LevelThree+Mod4;
+>         map[Shift]= Level2;
+>         map[Lock]= Level2;
+>         map[LevelThree]= Level3;
+>         map[Shift+LevelThree]= Level4;
+>         map[Lock+LevelThree]= Level3;
+>         preserve[Lock+LevelThree]= Lock;
+>         map[Shift+Lock+LevelThree]= Level4;
+>         preserve[Shift+Lock+LevelThree]= Lock;
+>         map[Mod4] = Level5;
+>         map[Shift+Mod4] = Level5;
+>         level_name[Level1]= "Base";
+>         level_name[Level2]= "Shift";
+>         level_name[Level3]= "Alt Base";
+>         level_name[Level4]= "Shift Alt";
+>         level_name[Level5]= "Mod4 Shift Alt";
+>     };
+1089c1123
+< xkb_symbols "pc+pl(legacy)+inet(evdev)" {
+---
+> xkb_symbols "pc+pl(legacy)+inet(evdev)+capslock(hyper)" {
+1169,1170c1203,1204
+<         type= "FOUR_LEVEL_SEMIALPHABETIC",
+<         symbols[Group1]= [               u,               U,       downarrow,         uparrow ]
+---
+>         type= "mod4_FOUR_LEVEL_SEMIALPHABETIC",
+>         symbols[Group1]= [               u,               U,       downarrow,         uparrow, Home]
+1173,1174c1207,1208
+<         type= "FOUR_LEVEL_SEMIALPHABETIC",
+<         symbols[Group1]= [               i,               I,      rightarrow,        idotless ]
+---
+>         type= "mod4_FOUR_LEVEL_SEMIALPHABETIC",
+>         symbols[Group1]= [               i,               I,      rightarrow,        idotless, Up]
+1177,1178c1211,1212
+<         type= "FOUR_LEVEL_ALPHABETIC",
+<         symbols[Group1]= [               o,               O,          oacute,          Oacute ]
+---
+>         type= "mod4_FOUR_LEVEL_ALPHABETIC",
+>         symbols[Group1]= [               o,               O,          oacute,          Oacute, End ]
+1219,1220c1253,1254
+<         type= "FOUR_LEVEL_SEMIALPHABETIC",
+<         symbols[Group1]= [               j,               J,       dead_hook,       dead_horn ]
+---
+>         type= "mod4_FOUR_LEVEL_SEMIALPHABETIC",
+>         symbols[Group1]= [               j,               J,       dead_hook,       dead_horn, Left ]
+1223,1224c1257,1258
+<         type= "FOUR_LEVEL_SEMIALPHABETIC",
+<         symbols[Group1]= [               k,               K,             kra,       ampersand ]
+---
+>         type= "mod4_FOUR_LEVEL_SEMIALPHABETIC",
+>         symbols[Group1]= [               k,               K,             kra,       ampersand, Down ]
+1227,1228c1261,1262
+<         type= "FOUR_LEVEL_ALPHABETIC",
+<         symbols[Group1]= [               l,               L,         lstroke,         Lstroke ]
+---
+>         type= "mod4_FOUR_LEVEL_ALPHABETIC",
+>         symbols[Group1]= [               l,               L,         lstroke,         Lstroke, Right ]
+1294c1328
+<     key <CAPS> {         [       Caps_Lock ] };
+---
+>     key <CAPS> {         [         Hyper_L ] };
+1523c1557
+<     modifier_map Lock { <CAPS> };
+---
+>     modifier_map Mod4 { <CAPS> };

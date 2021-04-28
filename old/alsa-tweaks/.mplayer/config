@@ -1,0 +1,5 @@
+ao=alsa:device=hw=2
+
+# Write your default config options here!
+
+
