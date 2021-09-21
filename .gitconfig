@@ -6,6 +6,7 @@
         ff = only
 [core]
         quotepath = false
+        pager = less -S
 #        excludesfile = ~/.gitignore
 [init]
 	defaultBranch = master
