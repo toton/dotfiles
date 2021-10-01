@@ -1,5 +1,9 @@
 #!/bin/bash
 
 DIR=~/.ssh
-ssh-agent -t24h -a $DIR/ssh-agent.socket | grep -v echo >$DIR/ssh-agent.env
-cat $DIR/ssh-agent.env
+SOCK=$DIR/ssh-agent.socket
+AGENV=$DIR/ssh-agent.env
+
+rm -f $SOCK
+ssh-agent -t24h -a $SOCK | grep -v echo >$AGENV
+cat $AGENV
