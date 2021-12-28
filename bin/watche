@@ -1,0 +1,23 @@
+. /etc/os-release
+sagent
+local-setup
+
+if (( $(ssh-add -l | wc -l ) < 1 )); then ssh-add; fi
+
+while true
+do
+    clear
+    echo
+    date --rfc-3339=seconds
+    echo
+    ncal -3b
+    echo
+    df -h
+    echo
+    echo $PRETTY_NAME
+    hostname -f
+    hostname --all-ip-addresses
+    echo
+    echo
+    sleep 2
+done
