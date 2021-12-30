@@ -4,20 +4,26 @@ local-setup
 
 if (( $(ssh-add -l | wc -l ) < 1 )); then ssh-add; fi
 
-while true
-do
-    clear
+prepare() {
+    #acpi -b
     echo
     date --rfc-3339=seconds
     echo
-    ncal -3b
+    unbuffer ncal -3b   # apt-get install expect
     echo
-    df -h
+    df -hT -xtmpfs -xdevtmpfs
     echo
     echo $PRETTY_NAME
     hostname -f
     hostname --all-ip-addresses
     echo
     echo
+}
+
+while true
+do
+    prepare >/tmp/watche-view
+    clear
+    cat /tmp/watche-view
     sleep 2
 done
