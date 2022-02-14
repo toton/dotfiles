@@ -8,6 +8,8 @@
         quotepath = false
         pager = less -S
 #        excludesfile = ~/.gitignore
+[diff]
+        wordRegex = .
 [init]
 	defaultBranch = master
 [alias]
