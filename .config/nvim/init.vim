@@ -1,6 +1,7 @@
 set relativenumber
 set number
 set scrolloff=10
+set sidescrolloff=10
 set nowrap
 set nostartofline
 set guioptions=Pce
