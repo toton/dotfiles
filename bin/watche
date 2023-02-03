@@ -1,4 +1,3 @@
-. /etc/os-release
 sagent
 local-setup
 
@@ -13,6 +12,7 @@ prepare() {
     echo
     df -hT -xtmpfs -xdevtmpfs
     echo
+    . /etc/os-release
     echo $PRETTY_NAME
     hostname -f
     hostname --all-ip-addresses
