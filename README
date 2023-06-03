@@ -1,5 +1,6 @@
+sudo apt-get update
 sudo apt-get install git git-annex tmux
-sudo apt-get install less neovim silversearcher-ag mc manpages bash-completion bzip2 file ncal ncdu zpaq
+sudo apt-get install less neovim silversearcher-ag mc manpages bash-completion aptitude bzip2 file ncal ncdu zpaq
 sudo apt-get install ssh mosh ntp bind9-dnsutils iputils-ping wget netcat-openbsd lshw hwloc-nox
 sudo apt-get install make gcc gdb sed headache mypy strace
 sudo apt-get install texlive-latex-base texlive-latex-extra
