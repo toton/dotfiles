@@ -1,0 +1,15 @@
+#!/bin/bash
+
+pushd $(dirname $0)
+
+ln -s `realpath bin/sagent` ~/bin/
+ln -s `realpath bin/watche` ~/bin/
+
+echo . `realpath bin/set-env-vars` >> ~/.bash_aliases
+
+ln -s `realpath .tmux.conf` ~/
+ln -s `realpath .gitconfig` ~/
+ln -s `realpath .gdbinit`   ~/
+ln -s `realpath .config/nvim/init.vim` ~/.config/nvim/
+
+popd
