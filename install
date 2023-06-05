@@ -6,7 +6,7 @@ pushd $(dirname $0)
 mkdir -p ~/bin/
 mkdir -p ~/.config/nvim/
 
-ln -sf `realpath bin/sagent` ~/bin/
+ln -sf `realpath bin/sagent` ~/bin/  # see also https://packages.debian.org/sid/keychain
 ln -sf `realpath bin/watche` ~/bin/
 
 echo . `realpath bin/set-env-vars` >> ~/.bash_aliases
