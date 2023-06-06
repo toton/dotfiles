@@ -1,5 +1,8 @@
-sagent
+#!/bin/bash
+set -e
+
 local-setup
+sagent
 
 if (( $(ssh-add -l | wc -l ) < 1 )); then ssh-add; fi
 
