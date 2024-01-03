@@ -4,6 +4,7 @@ sudo apt-get install less neovim silversearcher-ag mc manpages man-db bash-compl
 sudo apt-get install ssh mosh ntp bind9-dnsutils iputils-ping wget netcat-openbsd lshw hwloc-nox
 sudo apt-get install make gcc gdb sed headache mypy strace expect
 sudo apt-get install texlive-latex-base texlive-latex-extra
+sudo apt-get install imagemagick zbar-tools pass-otp
 
 git clone git@github.com:toton/dotfiles.git
 dotfiles/install
