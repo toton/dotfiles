@@ -1,4 +1,4 @@
-FontHeight=11
+FontHeight=13
 Locale=en_US
 Charset=UTF-8
 WindowShortcuts=no
@@ -18,3 +18,4 @@ FontSmoothing=none
 Term=xterm-256color
 Scrollbar=none
 #Window=full
+BoldAsFont=yes
