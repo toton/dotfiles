@@ -22,6 +22,11 @@ set clipboard+=unnamedplus
 "set wildmode=longest:full,full
 set wildmode=longest,list,full
 
+" Trying to get rid of netrw...
+let loaded_netrwPlugin = 1
+" ...or at least make its buffers killable:
+let g:netrw_fastbrowse = 0
+
 fun! DropTrailingWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
