@@ -13,7 +13,7 @@
 [init]
 	defaultBranch = master
 [alias]
-        glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
         st = status --short --branch
 
 [mergetool "kdiff3NoAuto"]
