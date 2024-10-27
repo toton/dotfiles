@@ -1,6 +1,6 @@
 ! reload with xrdb ~/.Xresources
 
-xterm*faceName: Monospace:size=11:antialias=false
+xterm*faceName: dejavusansmono:size=11:antialias=false:hintstyle=hintfull:hinting=true
 xterm*saveLines: 8192
 XTerm*reverseVideo: on
 
@@ -40,3 +40,5 @@ XTerm*color4: rgb:60/6f/ff
 XTerm*color7: rgb:d0/d0/d0
 
 Xft*antialias: false
+Xft.hintstyle: hintfull
+Xft.hinting: true
