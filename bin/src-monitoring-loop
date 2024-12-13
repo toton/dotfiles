@@ -1,0 +1,64 @@
+#!/bin/bash
+
+SRC=src/
+TMP=`mktemp -d src-monitoring-XXXX`
+mkdir -p $TMP
+OUTPUT=$TMP/output
+STATUS=$TMP/status
+VIEWER=$TMP/viewer
+
+RED=$'\x1b[31m'
+YELLOW=$'\x1b[33m'
+BOLD=$'\x1b[1m'
+NORMAL=$'\x1b(B\x1b[m'
+
+blocking_read()
+{
+        perl -MFcntl -e 'fcntl STDIN, F_SETFL, fcntl(STDIN, F_GETFL, 0) & ~O_NONBLOCK'
+        dd bs=1 count=$1
+}
+
+nonblocking_read()
+{
+        dd bs=1 count=$1 iflag=nonblock
+}
+
+events_source()
+{
+    echo
+    inotifywait -e attrib -e close_write -m -r $SRC
+}
+
+checker_loop()
+{
+    while true;
+    do
+        # blocking read of 1 byte from stdin
+        blocking_read 1
+        # eat all the readily available data
+        nonblocking_read 4096
+        echo _________________
+        date
+
+        echo $* $YELLOW $BOLD '(working...)' $NORMAL >$STATUS
+        "$@" &>$OUTPUT.tmp
+        mv $OUTPUT.tmp $OUTPUT
+        echo $* '(done)' >$STATUS
+    done
+}
+
+( events_source | checker_loop "$@" ) &>$TMP/log &
+
+cat >$VIEWER <<-EOF
+	#!/bin/bash
+	cat $STATUS
+	((lines=\$LINES-5))
+	head -n \$lines $OUTPUT | cut -c-$COLUMNS
+	echo _______________________________________________________
+	tail -n 1 $OUTPUT
+EOF
+chmod +x $VIEWER
+
+watch -n 0.4 -c $VIEWER
+
+# see also: watchexec, entr
