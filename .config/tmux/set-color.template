@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "$HOSTNAME" = "XXX" ]; then
+    tmux set -g status-bg "#70A800"
+fi
+
+if [ "$HOSTNAME" = "YYY" ]; then
+    tmux set -g status-bg "#d0b000"
+fi
+
+if [ "$HOSTNAME" = "ZZZ" ]; then
+    tmux set -g status-bg "#80a080"
+fi

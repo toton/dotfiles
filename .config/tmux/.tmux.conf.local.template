@@ -1,0 +1,5 @@
+new-session -dA -sXXX
+bind-key -n M-h switch-client -tXXX
+# ....
+
+run ~/.config/tmux/set-color
