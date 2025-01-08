@@ -11,7 +11,7 @@
 [diff]
         wordRegex = .
 [init]
-	defaultBranch = master
+        defaultBranch = master
 [alias]
         glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
         st = status --short --branch
@@ -20,15 +20,23 @@
         cmd = kdiff3 --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
 #[merge]
 #        tool = kdiff3NoAuto
-#
-#[user]
-#        name = Dawid Toton
-#        email = d0@wp.pl
 
+[include]
+        path = ~/.config/git/.gitconfig.local
+
+# What I put into .gitconfig.local:
+#[user]
+#        name = Aaaaa Aaaaa
+#        email = aa@aa.aa
+#[user]
+#	signingkey = AAAAAAAAAAAAAAAA
 #[http]
 #        proxy = http://[host]:[port]
 #[https]
 #        proxy = https://[host]:[port]
 
-[include]
-	path = ~/.config/git/.gitconfig.local
+# All my data is controlled by a git annex repository with some portions living natually in their git submodules (e.g. my code).
+# Some pieces of configuration of these submodules need to be protected by git to let me move my work across machines smoothly.
+# The default place, .git/modules/ is good for git-managed settings only, so to back some settings up I use conditional includes like this:
+[includeIf "gitdir:dotfiles"]
+        path = "~/Code/.gitconfig/dotfiles"
