@@ -8,6 +8,8 @@ mkdir -p ~/.config/nvim/
 
 ln -sf `realpath bin/sagent` ~/bin/  # see also https://packages.debian.org/sid/keychain
 ln -sf `realpath bin/watche` ~/bin/
+ln -sf `realpath bin/edit-secret` ~/bin/
+ln -sf `realpath bin/pass` ~/bin/
 
 echo . `realpath bin/set-env-vars` >> ~/.bash_aliases
 
